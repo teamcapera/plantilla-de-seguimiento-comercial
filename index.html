@@ -1,111 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Team Capera SIIGO - Seguimiento Comercial</title>
-  <style>
-    body { font-family: Arial, sans-serif; background:#f7f9fc; padding:20px; }
-    .card { max-width: 700px; margin:auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,.1); }
-    h1 { text-align:center; }
-    label { display:block; margin-top:10px; font-weight:bold; }
-    input, select, textarea { width:100%; padding:6px; margin-top:4px; }
-    button { margin-top:15px; padding:10px; width:100%; background:#007bff; color:white; border:none; border-radius:6px; cursor:pointer; }
-    button:hover { background:#0056b3; }
-  </style>
+<meta charset="UTF-8">
+<title>Team Capera SIIGO - Seguimiento Comercial</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;background:#f4f8fb;padding:20px}
+.card{max-width:820px;margin:auto;background:#fff;padding:20px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.1)}
+h1{text-align:center;color:#0056A6}
+label{display:block;margin-top:10px;font-weight:bold}
+input,select,textarea{width:100%;padding:6px;margin-top:4px;border-radius:5px;border:1px solid #ccc}
+button{margin-top:12px;padding:10px;width:100%;background:#00AEEF;color:white;border:none;border-radius:6px;cursor:pointer}
+button:hover{opacity:.9}
+.badge{padding:5px 10px;border-radius:6px;display:inline-block;margin:4px 0;font-weight:bold}
+.red{background:#e53935;color:#fff}
+.green{background:#43A047;color:#fff}
+.blue{background:#1E88E5;color:#fff}
+.orange{background:#FB8C00;color:#fff}
+footer{text-align:center;margin-top:25px;font-size:12px;color:#555}
+</style>
 </head>
-<body style="font-family:Arial,Helvetica,sans-serif;background:#F4F8FB">
+<body>
 <div class="card">
-<h1 style="text-align:center;color:#0056A6">Team Capera SIIGO</h1><p style="text-align:center;color:#00AEEF;font-weight:bold">Seguimiento Comercial</p><p style="text-align:center;color:#D32F2F;font-weight:bold">⚠️ Recuerda: los productos suben el 14% en enero</p><p id="mensajeAsesor" style="text-align:center;color:#2E7D32;font-weight:bold"></p><div style="text-align:center;margin:10px 0"><a href="https://siigosa-my.sharepoint.com/:p:/g/personal/david_capera_siigo_com/IQAecBLVBxdQR5rAiqgyqcovAatLj0qEouSFn9yGm21O_8U?wdOrigin=TEAMS-MAGLEV.p2p_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1764603876177&web=1" target="_blank" style="margin:6px;display:inline-block;color:#fff;background:#E53935;padding:8px 12px;border-radius:6px;text-decoration:none">🎄 Oferta Diciembre</a><a href="https://siigosa-my.sharepoint.com/:x:/g/personal/comunicacionoperaciones_siigo_com/EZC6y-1oZaZMjxbjfa3p-igBBfa54Vt2DcGEGMBj6Sihmw?e=HRphdY" target="_blank" style="margin:6px;display:inline-block;color:#fff;background:#1E88E5;padding:8px 12px;border-radius:6px;text-decoration:none">📅 Agenda de Booking</a><a href="https://siigosa-my.sharepoint.com/:x:/g/personal/mend111573_siigo_com/IQDAyQCRUBKIQox0k59qVczXAUQpcrh6NeSuFIk1wzDCE2A?email=liliana.giraldo%40siigo.com&e=yIkIci" target="_blank" style="margin:6px;display:inline-block;color:#fff;background:#43A047;padding:8px 12px;border-radius:6px;text-decoration:none">🤝 Beneficios Contadores</a></div>
+<h1>Team Capera SIIGO</h1>
+<p class="badge red">⚠️ Recuerda: los productos suben el 14% en enero</p>
+<p id="mensajeAsesor" class="badge green"></p>
+<p id="metaAsesor" class="badge blue"></p>
+
+<div style="text-align:center;margin:12px 0">
+<a class="badge red" target="_blank" href="https://siigosa-my.sharepoint.com/:p:/g/personal/david_capera_siigo_com/IQAecBLVBxdQR5rAiqgyqcovAatLj0qEouSFn9yGm21O_8U">🎄 Oferta Diciembre</a>
+<a class="badge blue" target="_blank" href="https://siigosa-my.sharepoint.com/:x:/g/personal/comunicacionoperaciones_siigo_com/EZC6y-1oZaZMjxbjfa3p-igBBfa54Vt2DcGEGMBj6Sihmw">📅 Agenda de Booking</a>
+<a class="badge green" target="_blank" href="https://siigosa-my.sharepoint.com/:x:/g/personal/mend111573_siigo_com/IQDAyQCRUBKIQox0k59qVczXAUQpcrh6NeSuFIk1wzDCE2A">🤝 Beneficios Contadores</a>
+</div>
 
 <label>Asesor</label>
-<select id="asesor">
-<option value="">Seleccione asesor</option>
-<option>Leonardo Fabio Gomez Pardo</option>
-<option>Angelica Maryuri Gamboa Villar</option>
-<option>Angelica Martinez Arturo</option>
-<option>John Edilberto Cruz Espinosa</option>
-<option>Zaida Nahir Zambrano Molina</option>
-<option>Maria Alejandra Torres Osorio</option>
-<option>Saida Bibiana Cruz Molina</option>
-<option>Johanna Lizeth Guillen Mojica</option>
-<option>Monica Rocio Curcio Mercado</option>
-<option>Paola Alejandra Salinas Vaca</option>
-</select>
+<select id="asesor"></select>
 
 <label>Cliente</label>
-<input type="text" id="cliente">
+<input id="cliente">
 
-<label>Canal de contacto</label>
-<select id="canal">
-  <option>Five9</option>
-  <option>WhatsApp</option>
-  <option>Otro</option>
-</select>
+<label>Canal</label>
+<select id="canal"><option>Five9</option><option>WhatsApp</option></select>
 
 <label>Resultado</label>
-<select id="resultado">
-  <option>Contesta</option>
-  <option>Buzón</option>
-  <option>No responde</option>
-  <option>Reagenda</option>
-</select>
+<select id="resultado"><option>Contesta</option><option>Buzón</option><option>No responde</option><option>Reagenda</option></select>
 
-<label>Producto ofrecido</label>
-<select id="producto" onchange="asignarDescuento()">
-<option value="">Selecciona producto</option>
-<option>FE (120 Doc)</option>
-<option>FE (120 Doc) WP</option>
-<option>FE (1500 Doc)</option>
-<option>FE (24 Doc)</option>
-<option>FE (24 Doc) WP</option>
-<option>FE PRO</option>
-<option>Nomina Lite 10 (120 Doc)</option>
-<option>Nomina Lite 2 (24 Doc)</option>
-<option>Nomina Lite 25 (300 Doc)</option>
-<option>Nomina Plus</option>
-<option>Nomina Pro</option>
-<option>Nube Profesional Independiente</option>
-<option>Nuevo Siigo Nube Emprendedor</option>
-<option>Nuevo Siigo Nube Premium</option>
-<option>POS AVANZADO</option>
-<option>POS ESENCIAL</option>
-<option>Pos Gastrobar PRO</option>
-<option>POS INICIO</option>
-</select>
+<label>Producto</label>
+<select id="producto"><option value="">Seleccione...</option></select>
 
-<label>Descuento (%)</label>
-<input type="text" id="descuento" readonly>
+<label>Descuento</label>
+<input id="descuento" readonly>
 
-<label>Fecha de compromiso</label><input type="date" id="fechaCompromiso"><label>Observaciones</label>
+<label>Fecha compromiso</label>
+<input type="date" id="fechaCompromiso">
+
+<label>Observaciones</label>
 <textarea id="obs"></textarea>
 
-<label>Próxima acción / compromiso</label>
+<label>Próximo paso</label>
 <textarea id="prox"></textarea>
 
 <button onclick="copiar()">Copiar resumen</button>
-<button onclick="exportarUso()" style="background:#4CAF50">Exportar uso (control)</button>
-<p id="contador" style="text-align:center;font-weight:bold;color:#333"></p>
+<button style="background:#4CAF50" onclick="exportarUso()">Exportar uso</button>
+<p id="contador"></p>
 </div>
 
+<footer>Desarrollado por Commercial Manager David Stiven Capera Silva - <script>document.write(new Date().getFullYear())</script></footer>
+
 <script>
-// Fecha automática y mensaje motivador
-const hoy = new Date().toISOString().split('T')[0];
-const f = document.getElementById('fechaCompromiso'); if(f){f.value=hoy;}
-const asesorSel=document.getElementById('asesor');
-const metas = {
-"Maria Alejandra Torres Osorio": {nube:6, fe:23, gastro:1},
-"Zaida Nahir Zambrano Molina": {nube:6, fe:23, gastro:1},
-"Monica Rocio Curcio Mercado": {nube:5, fe:21, gastro:1},
-"Paola Alejandra Salinas Vaca": {nube:5, fe:21, gastro:1},
-"Angelica Martinez Arturo": {nube:5, fe:21, gastro:1},
-"Johanna Lizeth Guillen Mojica": {nube:3, fe:8, gastro:1},
-"Angelica Maryuri Gamboa Villar": {nube:2, fe:7, gastro:1},
-"Saida Bibiana Cruz Molina": {nube:2, fe:7, gastro:1},
-"John Edilberto Cruz Espinosa": {nube:2, fe:7, gastro:1},
-"Leonardo Fabio Gomez Pardo": {nube:1, fe:6, gastro:1}
-};
-asesorSel.addEventListener('change',()=>{
- const metas={
+const hoy=new Date().toISOString().split('T')[0];fechaCompromiso.value=hoy;
+
+const asesores={
 "Maria Alejandra Torres Osorio":{nube:6,fe:23,gas:1},
 "Zaida Nahir Zambrano Molina":{nube:6,fe:23,gas:1},
 "Monica Rocio Curcio Mercado":{nube:5,fe:21,gas:1},
@@ -116,103 +80,44 @@ asesorSel.addEventListener('change',()=>{
 "Saida Bibiana Cruz Molina":{nube:2,fe:7,gas:1},
 "John Edilberto Cruz Espinosa":{nube:2,fe:7,gas:1},
 "Leonardo Fabio Gomez Pardo":{nube:1,fe:6,gas:1}
- };
- let m=metas[asesorSel.value];
- if(m){
- document.getElementById('mensajeAsesor').textContent=`Vamos ${asesorSel.value}, hoy es un gran día para cerrar 👊 | 🎯 Meta mes → Nube: ${m.nube} | FE: ${m.fe} | Gastro: ${m.gas}`;
- } else {
- document.getElementById('mensajeAsesor').textContent=`Vamos ${asesorSel.value}, hoy es un gran día para cerrar 👊`;
- }
+};
+
+const descuentos={"FE (120 Doc)":15,"FE (120 Doc) WP":30,"FE (1500 Doc)":15,"FE (24 Doc)":0,"FE (24 Doc) WP":20,"FE PRO":15,"Nomina Lite 10 (120 Doc)":10,"Nomina Lite 2 (24 Doc)":0,"Nomina Lite 25 (300 Doc)":20,"Nomina Plus":20,"Nomina Pro":20,"Nube Profesional Independiente":20,"Nuevo Siigo Nube Emprendedor":20,"Nuevo Siigo Nube Premium":25,"POS AVANZADO":15,"POS ESENCIAL":0,"Pos Gastrobar PRO":35,"POS INICIO":10};
+
+Object.keys(asesores).forEach(a=>asesor.innerHTML+=`<option>${a}</option>`);
+Object.keys(descuentos).forEach(p=>producto.innerHTML+=`<option>${p}</option>`);
+
+asesor.addEventListener('change',()=>{
+ let m=asesores[asesor.value];
+ mensajeAsesor.textContent=`Vamos ${asesor.value}, HOY es día de cerrar 💥`;
+ metaAsesor.textContent=`🎯 Meta → Nube: ${m.nube} | FE: ${m.fe} | Gastro: ${m.gas}`;
 });
 
-// --- CONTROL DE USO ---
-let conteo = localStorage.getItem('usoPlantilla') || 0;
-conteo++;
-localStorage.setItem('usoPlantilla', conteo);
-document.getElementById('contador').textContent = "Usos registrados en este navegador: " + conteo;
+producto.addEventListener('change',()=>{descuento.value=descuentos[producto.value]+"%"||''});
+
+let uso=localStorage.getItem('usoPlantilla')||0;uso++;localStorage.setItem('usoPlantilla',uso);
+contador.textContent='Usos registrados: '+uso;
+
+function copiar(){
+ const t=`SEGUIMIENTO COMERCIAL
+Asesor:${asesor.value}
+Cliente:${cliente.value}
+Canal:${canal.value}
+Resultado:${resultado.value}
+Producto:${producto.value}
+Descuento:${descuento.value}
+Fecha:${fechaCompromiso.value}
+Obs:${obs.value}
+Próximo:${prox.value}`;
+ navigator.clipboard.writeText(t);alert('Resumen copiado');}
 
 function exportarUso(){
- let asesor = document.getElementById('asesor').value || 'Sin asesor';
- let fecha = new Date().toLocaleString();
- let total = localStorage.getItem('usoPlantilla') || 0;
- let csv = "Fecha,Asesor,Usos totales
-" + fecha + "," + asesor + "," + total;
- let blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
- let link = document.createElement('a');
- link.href = URL.createObjectURL(blob);
- link.download = 'control_uso_team_capera.csv';
- link.click();
-}
-
-function copiar() {
-  const texto = `SEGUIMIENTO COMERCIAL\n`+
-  `Asesor: ${asesor.value}\n`+
-  `Cliente: ${cliente.value}\n`+
-  `Canal: ${canal.value}\n`+
-  `Resultado: ${resultado.value}\n`+
-  `Producto: ${producto.value}\n`+
-  `Descuento: ${descuento.value}%\n`+
-  `Observaciones: ${obs.value}\n`+
-  `Fecha compromiso: ${fechaCompromiso.value}
-Próximo paso: ${prox.value}`;
-  navigator.clipboard.writeText(texto);
-  alert("Resumen copiado");
+ let csv=`Fecha,Asesor,Usos
+${new Date().toLocaleString()},${asesor.value},${localStorage.getItem('usoPlantilla')}`;
+ let blob=new Blob([csv],{type:'text/csv'});
+ let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='control_uso_team_capera.csv';a.click();
 }
 </script>
-<section style="max-width:800px;margin:20px auto;padding:16px;border:1px solid #ddd;border-radius:8px">
-<h3>Tabla de descuentos por producto</h3>
-<table border="1" cellpadding="6" cellspacing="0" width="100%">
-<tr><th>Producto</th><th>Descuento (%)</th></tr>
-<tr><td>FE (120 Doc)</td><td>15</td></tr>
-<tr><td>FE (120 Doc) WP</td><td>30</td></tr>
-<tr><td>FE (1500 Doc)</td><td>15</td></tr>
-<tr><td>FE (24 Doc)</td><td>0</td></tr>
-<tr><td>FE (24 Doc) WP</td><td>20</td></tr>
-<tr><td>FE PRO</td><td>15</td></tr>
-<tr><td>Nomina Lite 10 (120 Doc)</td><td>10</td></tr>
-<tr><td>Nomina Lite 2 (24 Doc)</td><td>0</td></tr>
-<tr><td>Nomina Lite 25 (300 Doc)</td><td>20</td></tr>
-<tr><td>Nomina Plus</td><td>20</td></tr>
-<tr><td>Nomina Pro</td><td>20</td></tr>
-<tr><td>Nube Profesional Independiente</td><td>20</td></tr>
-<tr><td>Nuevo Siigo Nube Emprendedor</td><td>20</td></tr>
-<tr><td>Nuevo Siigo Nube Premium</td><td>25</td></tr>
-<tr><td>POS AVANZADO</td><td>15</td></tr>
-<tr><td>POS ESENCIAL</td><td>0</td></tr>
-<tr><td>Pos Gastrobar PRO</td><td>35</td></tr>
-<tr><td>POS INICIO</td><td>10</td></tr>
-</table>
-</section>
-<script>
-const descuentos={
-"FE (120 Doc)":15,
-"FE (120 Doc) WP":30,
-"FE (1500 Doc)":15,
-"FE (24 Doc)":0,
-"FE (24 Doc) WP":20,
-"FE PRO":15,
-"Nomina Lite 10 (120 Doc)":10,
-"Nomina Lite 2 (24 Doc)":0,
-"Nomina Lite 25 (300 Doc)":20,
-"Nomina Plus":20,
-"Nomina Pro":20,
-"Nube Profesional Independiente":20,
-"Nuevo Siigo Nube Emprendedor":20,
-"Nuevo Siigo Nube Premium":25,
-"POS AVANZADO":15,
-"POS ESENCIAL":0,
-"Pos Gastrobar PRO":35,
-"POS INICIO":10
-};
-function asignarDescuento(){
- const producto=document.getElementById('producto').value;
- const input=document.getElementById('descuento');
- if(descuentos[producto]!=null){
- input.value=descuentos[producto]+'%';
- } else {
- input.value='';
- }
-}
-</script>
-<footer style="text-align:center;margin-top:24px;color:#555;font-size:12px">Desarrollado por Commercial Manager David Stiven Capera Silva - <script>document.write(new Date().getFullYear())</script></footer></body>
+</body>
 </html>
+
